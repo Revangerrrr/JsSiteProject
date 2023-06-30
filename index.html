@@ -13,8 +13,13 @@
 </head>
 
 <body>
+    <div class="welcome-page">
+        <input type="text" id="nameInput" placeholder="Введите ваше имя" />
+        <button onclick="goToMainPage()">Далее</button>
+    </div>
 
-    <div class="container">
+    <div id="mainPage" class="container" style="display: none;">
+        <h1 id="welcomeMessage"></h1>
         <div class="search-box">
             <i class="fa-solid fa-house"></i>
             <input type="text" placeholder="Введите город">
@@ -50,7 +55,7 @@
         </div>
 
     </div>
-    
+
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>

@@ -4,6 +4,15 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
+function goToMainPage() {
+    var name = document.getElementById("nameInput").value;
+    if (name !== "") {
+        document.getElementById("welcomeMessage").innerHTML = "Привет, " + name + "!";
+        document.getElementById("mainPage").style.display = "block";
+        document.getElementsByClassName("welcome-page")[0].style.display = "none";
+    }
+}
+
 search.addEventListener('click', () => {
 
     const APIKey = '5bc2b4f40acfffa046713955a4370d52';
@@ -17,7 +26,7 @@ search.addEventListener('click', () => {
         .then(json => {
 
             if (json.cod === '404') {
-                container.style.height = '400px';
+                container.style.height = '500px';
                 weatherBox.style.display = 'none';
                 weatherDetails.style.display = 'none';
                 error404.style.display = 'block';
@@ -89,7 +98,7 @@ search.addEventListener('click', () => {
             weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
-            container.style.height = '590px';
+            container.style.height = '690px';
 
 
         });
