@@ -10,9 +10,11 @@ function goToMainPage() {
         document.getElementById("welcomeMessage").innerHTML = "Привет, " + name + "!";
         document.getElementById("mainPage").style.display = "block";
         document.getElementsByClassName("welcome-page")[0].style.display = "none";
+        mainPage();
     }
 }
 
+function mainPage(){
 search.addEventListener('click', () => {
 
     const APIKey = '5bc2b4f40acfffa046713955a4370d52';
@@ -105,3 +107,4 @@ search.addEventListener('click', () => {
 
 
 });
+}
